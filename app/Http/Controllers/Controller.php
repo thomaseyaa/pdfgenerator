@@ -28,7 +28,7 @@ class Controller extends BaseController
             unlink(public_path().'/pdf/model/model.pdf');
         }
         $file = $request->file('pdf');
-        $file->move(public_path ('\pdf\model'), 'model.pdf');
+        $file->move(public_path ('/pdf/model'), 'model.pdf');
         if (!($fp = fopen($request->csv, 'r'))) {
             die("Can't open file...");
         }
